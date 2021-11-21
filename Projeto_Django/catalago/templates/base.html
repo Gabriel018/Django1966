@@ -4,7 +4,9 @@
     <meta charset="UTF-8">
     {% block title %}<title>Livraria Local</title>{% endblock %}
 </head>
-
+{% block content %} <h1>Livraria Local</h1>
+  <p>Welcome to LocalLibrary, a website developed by <em>  Network</em>!</p>
+{% endblock %}
 <body>
 {% block siderbar %}<ul>
           <li><a href="{% url 'index' %}">Home</a></li>
@@ -13,8 +15,5 @@
            </ul>
 {% endblock %}
 
-{% block content %} <h1>Local Library Home</h1>
-  <p>Welcome to LocalLibrary, a website developed by <em>Mozilla Developer Network</em>!</p>
-{% endblock %}
 </body>
 </html>
