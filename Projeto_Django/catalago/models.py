@@ -10,7 +10,7 @@ class MyModelName(models.Model):
     class Meta:
      ordering = ['field_name']
 
-    def get_absolut_url(self):
+    def get_absolute_url(self):
         return reverse('model-detail-view',args=[str(self.id)])
 
     def __str__(self):

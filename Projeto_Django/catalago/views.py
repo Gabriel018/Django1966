@@ -3,7 +3,7 @@ from .models import Book, Author,BookInstance,Genero
 # Create your views here.
 
 def index(request):
-    num_books = Book.objects.all()
+    num_books = Book.objects.all().count()
     num_instancias = BookInstance.objects.all().count()
 
     num_instancias_available  = BookInstance.objects.filter(status__exact='a').count()
