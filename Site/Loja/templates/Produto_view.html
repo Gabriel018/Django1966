@@ -1,0 +1,17 @@
+
+{%  include 'Model-Header.html'  %}
+
+
+<h2>Lista de Produtos</h2>
+<div style="font-size: 20px">
+{% block content %}
+    {% for produto in produtos %}
+   <li> <b>{{ produto.id }} -{{ produto.titulo }} - {{ produto.price }}
+       <a href="">Editar</a>  </b></li>
+
+    {% endfor %}
+</div>
+{% endblock %}
+<div>
+
+</div>

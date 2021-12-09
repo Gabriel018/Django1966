@@ -15,7 +15,7 @@ def Produto_Add(request):
         redirect('/')
     dados['form']= form
 
-    return render(request,'index.html',dados)
+    return render(request,'cadastro.html',dados)
 
 def Produto_View(request):
 
@@ -24,7 +24,7 @@ def Produto_View(request):
     dado = {
          'produtos':produto
     }
-    return render(request, 'index.html',dado)
+    return render(request, 'Produto_view.html',dado)
 
 
 def Produto_Update(request,id):
@@ -36,4 +36,9 @@ def Produto_Update(request,id):
         form.save()
         return redirect('/')
 
-    return render(request, 'index.html', {'form': form, 'produto': produto})
+    return render(request, 'cadastro.html', {'form': form, 'produto': produto})
+
+def inicio(request):
+
+
+    return render(request,'Model-page.html')

@@ -1,0 +1,17 @@
+{% include 'Model-Header.html' %}
+
+
+
+
+{% block content %}
+
+<form method="POST">
+
+    {% csrf_token %}
+       <div style="font-size: 16px">
+    {{ form.as_p }}
+</div>
+    <input  type="submit" value="Salvar">
+</form>
+
+{% endblock %}
